@@ -24,7 +24,7 @@
 
         $.getJSON('https://ipinfo.io/json', function(data) {
             const element = document.getElementById("test");
-            element.innerHTML = `${data.ip} ip adresiniz cimere şikayet edilmiştir.<br>Bölgeniz: ${data.city}<br>Sağlayıcınız: ${data.org}`;
+            element.innerHTML = `${data.ip} ip adresiniz cimere şikayet edilmiştir.<br><p style="font-size: 25px;">Bölgeniz: ${data.city}<br>Sağlayıcınız: ${data.org}</p>`;
         });
     </script>
 </body>
