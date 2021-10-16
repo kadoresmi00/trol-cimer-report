@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TROL WEB SİTE</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Emblem_of_the_Presidency_of_Turkey.svg/1200px-Emblem_of_the_Presidency_of_Turkey.svg.png" type="image/ico" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet" />
+</head>
+
+<body style="background: #000000">
+    <div class="kado" id="test"></div>
+    <div align="center" style="margin-top: 20px;"><img src="https://www.egm.gov.tr/kurumlar/egm.gov.tr/anasayfaTasarim/logo/DaireLogo/siber.png" width="390" alt="resim" /></div>
+    <div align="center" style="margin-top: 20px;"><img src="https://www.gorele.bel.tr/wp-content/uploads/2018/12/cimer-logo.png" width="600" alt="resim" /></div>
+    <footer>
+        <strong><p style="color: white; font-size: 15px;" align="center">BU SİTE TROL AMAÇLI YAPILMIŞTIR ✌ <br>Herhangi bir gerçekliği yoktur. Herhangi bir İP veriniz tutulmamaktadır. <a href="https://github.com/kadoresmi00">Kaynak Kodları</a></a></p></strong>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+        // setTimeout(() => {
+        //     window.location.href = "https://cimer.gov.tr/Basvuru/BasvuruResult";
+        // }, 2500);
+
+        $.getJSON('https://ipinfo.io/json', function(data) {
+            const element = document.getElementById("test");
+            element.innerHTML = `${data.ip} ip adresiniz cimere şikayet edilmiştir.<br>Bölgeniz: ${data.city}`;
+        });
+    </script>
+</body>
+
+</html>
+
+<style>
+    .kado {
+        font-family: 'Roboto', sans-serif;
+        font-size: 50px;
+        color: white;
+        text-align: center;
+        margin-top: 80px;
+    }
+</style>
